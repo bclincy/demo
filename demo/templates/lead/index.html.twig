@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Lead index{% endblock %}
+
+{% block body %}
+    <h1>Lead index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Fname</th>
+                <th>Lname</th>
+                <th>Email</th>
+                <th>Zipcode</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for lead in leads %}
+            <tr>
+                <td>{{ lead.id }}</td>
+                <td>{{ lead.fname }}</td>
+                <td>{{ lead.lname }}</td>
+                <td>{{ lead.email }}</td>
+                <td>{{ lead.zipcode }}</td>
+                <td>
+                    <a href="{{ path('lead_show', {'id': lead.id}) }}">show</a>
+                    <a href="{{ path('lead_edit', {'id': lead.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('lead_new') }}">Create new</a>
+{% endblock %}

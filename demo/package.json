@@ -1,0 +1,25 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "demo lead generate",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "yarn": "^1.9.4"
+  },
+  "devDependencies": {
+    "add": "^2.0.6",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.4"
+  },
+  "scripts": {
+    "test": "node app.js"
+  },
+  "keywords": [
+    "leads"
+  ],
+  "author": "Brian Clincy",
+  "license": "ISC"
+}
